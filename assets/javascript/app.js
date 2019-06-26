@@ -1,5 +1,4 @@
-$( document ).ready(function() {
-  $(function () {
+
 //On click button
 init();
 var comedyArray=["Deadpool","Bridesmaids","21 Jump Street","Hot Fuzz", "Zombieland", "The Hangover", "Airplane!", "Ghostbusters","Mean Girls", "Robin Hood Men in Tights"];
@@ -91,5 +90,4 @@ function init() {
   });
   console.log('Search Request');
 }
-});
-});
+
