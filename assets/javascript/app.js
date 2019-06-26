@@ -56,12 +56,12 @@ $(".searchButton").on("click", function(e){
 // start youtube api call
 $("#ytForm").on('submit', function (e) {
   e.preventDefault();
-  console.log("clicked")
+  console.log("clickedfff")
   var request = gapi.client.youtube.search.list({
       kind: "youtube#searchResult",
       part: "snippet",
       type: "video",
-      q: $("#textBox").val().replace(/%20/g, "+"),
+      q: $(".search-input").val().replace(/%20/g, "+"),
       maxResults: 3,
       order: "viewCount",
   })
@@ -71,7 +71,7 @@ $("#ytForm").on('submit', function (e) {
       console.log(str)
 
       $.each(response.result.items, function (index, item) {
-          $(".movie-trailer-video").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + item.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+          $(".trailer-heading").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + item.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
       });
   });
   return false;
