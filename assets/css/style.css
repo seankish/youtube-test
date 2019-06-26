@@ -1,0 +1,120 @@
+#logo {
+    width: 200px;
+    height: 150px;
+  }
+  .header {
+    background-color: grey;
+    border-bottom: 1px solid black;
+  }
+  body {
+    background-color: grey;
+  }
+  .lucky-button {
+    border: 1px solid black;
+    background: #515b99;
+    width: 100px;
+    height: 100px;
+  }
+  .footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+  }
+  .title {
+    text-align: center;
+  }
+  .genre {
+    text-align: center;
+  }
+  .movie-title-box {
+    border: 5px solid;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-bottom: 2.5px solid;
+    padding: 25px;
+    color: white;
+    border-color: #170142;
+    background: #515b99;
+  }
+  .r3-box {
+    border: 2.5px solid;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-bottom: 2.5px solid;
+    color: white;
+    border-color: #170142;
+    background: #515b99;
+  }
+  .synopsis {
+    padding-left: 2px;
+    border: 2.5px solid;
+    height: 10%;
+    text-align: center;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-bottom: 2.5px solid;
+    color: white;
+    border-color: #170142;
+    background: #515b99;
+  }
+  .cast-directors-box {
+    border: 2.5px solid;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-bottom: 2.5px solid;
+    color: white;
+    border-color: #170142;
+    background: #515b99;
+  }
+  .trailer-heading {
+    align-items: center;
+    flex-grow: 0;
+    width:50%;
+    border: 2.5px solid;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-bottom: 2.5px solid;
+    color: white;
+    border-color: #170142;
+    background: #515b99;
+    padding: 200px;
+    padding-top: 0%;
+  }
+  .review-heading {
+    align-items: center;
+    flex-grow: 0;
+    width: 50%;
+    border: 2.5px solid;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-bottom: 2.5px solid;
+    color: white;
+    border-color: #170142;
+    background: #515b99;
+    padding: 200px;
+    padding-top: 0%;
+  }
+ 
+  body {
+    margin: 1%;
+  }
+  .lucky-button {
+    height: 45px;
+    width: 200px;
+  }
+  .movie-poster {
+    text-align: center;
+  }
+  .searchButton {
+    border: 1px solid black;
+    background: #515b99;
+  }
+ .directors{
+   align-items: center;
+   
+   border-left: 1px solid whitesmoke;
+   padding-left: 1px;
+ }
+ footer {
+   width:100%;
+ }

@@ -1,45 +1,81 @@
 <!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script> -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>~-SteamStack-~</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://apis.google.com/js/client.js"></script>
-  </head>
-  <body onload="init();">
-    <form id="ytForm">
-      <div class="form-group col-6">
-        <!-- <label for="exampleInputEmail1">Email address</label> -->
-        <input
-          type="text"
-          id="textBox"
-          class="form-control "
-          aria-describedby=""
-          placeholder=""
-        />
-      </div>
-      <button type="submit" class="btn btn-primary" id="submitBtn">
-        Submit
-      </button>
-    </form>
-    <div id="results"></div>
+</head>
+<body onload="init();">
+                <!-- Start of header/navbar   -->
+        <div class= "d-flex justify-content-between flex-row header mb-3">
+                <div class ="pt-5">
+                        <button type="button" class="btn btn-secondary lucky-button">I'm Feeling Lucky!</button>
+                </div>
+                <img id="logo" src="assets/images/okCinemaLogo.png" alt="OK-Cinema">
+                <form id="ytForm">
+                        <div class="form-group">
+                                <div class="input-group mb-3 pt-5 mr-2">
+                <input type="text" id="textBox" class="form-control search-input" placeholder="Search For a Movie!" aria-label="Movie-search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                        <button id="submitBtn" class="btn btn-primary searchButton" type="submit">Search</button>
+                </div>
+                                </div>          
+                        </div>
+                </form>
+        </div>
 
-    
+            <!-- Start of of movie content -->
+        <div class ="container">
+                <div class= "movie-title-box d-flex flex-column mb-1">
+                                <h1 class="title"> Title: </h1>
+                                <h3 class= "genre"> Genre: </h3>
+                </div>
+                        
+                <div class ="r3-box d-flex flex-row justify-content-around mb-1">
+                        <h3 class= "rating">Rating:</h3>
+                        <h3 class= "runtime">Runtime:</h3>
+                        <h3 class= "releaseDate">Release:</h3>
+                </div>
+                <h3 class = "synopsis">Summary: </h3> 
+                
+                <div class ="cast-directors-box d-flex flex-row justify-content-around mb-1">
+                        <h3 class = "cast"> Main Cast: </h3>
+                        <div class="row">
+                                <h4 class = "directors">Directors: </h4>
+                        </div>
+                </div>
 
- 
-
-
-  </body>
-  <script src="youtube.js"></script>
+                <div class= "Trailer-video d-flex flex-row justify-content-between">
+                        <div class = "trailer-heading flex-column d-flex pt-3"> <h3>Trailer:</h3>
+                                <div class ="movie-trailer-video"></div>
+                        </div>
+                       
+                        <div class = "review-heading flex-column  d-flex justify-content-center">
+                                <div class="row pt-3"><h3>Movie Poster:</h3></div>
+                                <div class=" pt-5 movie-poster"></div>
+                        </div>     
+                </div>
+        </div> 
+                 
+       
+           
+       
+               
+               <script src="" async defer></script>
+</body>
+           <footer class ="footer d-flex flex-row justify-content-center"> COPYRIGHT STEAMsTACK $QUAD 2019</footer>
+           <script src="assets/javascript/app.js" async defer></script>
 </html>
