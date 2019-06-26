@@ -1,6 +1,6 @@
 
 //On click button
-init();
+
 var comedyArray=["Deadpool","Bridesmaids","21 Jump Street","Hot Fuzz", "Zombieland", "The Hangover", "Airplane!", "Ghostbusters","Mean Girls", "Robin Hood Men in Tights"];
 var horrorArray=["The conjuring", "Psycho", "The conjuring 2", "the grudge", "Us", "A quiet place", "It follows", "Annable", "Paranormal Activity", "Scream"];
 var romanceArray=["The fault in our stars", "The Notebook", "Call me By your name", "A star is born", "La la land", "One day", "Love actually", "Love Story", "Pride and Prejudice", "Casablanca"];
@@ -54,7 +54,7 @@ $(".searchButton").on("click", function(e){
 });
 
 // start youtube api call
-$(".searchButton").on("click", function(e){
+$(".searchButton").on("click", function (e) {
   e.preventDefault();
   console.log("clickedfff")
   var request = gapi.client.youtube.search.list({
@@ -90,4 +90,3 @@ function init() {
   });
   console.log('Search Request');
 }
-
