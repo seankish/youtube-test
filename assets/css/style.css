@@ -68,7 +68,7 @@
     background: #515b99;
   }
   .trailer-heading {
-    overflow: hidden;
+    
     align-items: center;
     flex-grow: 0;
     width:50%;
@@ -105,6 +105,7 @@
     width: 200px;
   }
   .movie-poster {
+    align-self: flex-start;
     text-align: center;
   }
   .searchButton {
