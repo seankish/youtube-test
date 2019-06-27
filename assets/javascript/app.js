@@ -14,8 +14,120 @@ var musicalsArray=["Enchanted","La La Land", "A Star is Born", "Mamma Mia", "Les
 var indieArray=["Lady Bird", "The Big Sick", "Call me by Your Name", "Boyhood", "Tangerine", "Winter's Bone", "Manchester by the Sea", "Blue Jay", "Krisha", "Green Room"];
 var thrillerArray=["Annabelle", "Child's Play", "Ma", "Get Out", "Don't Breathe", "Seven", "The Silence of the Lambs", "Shutter Island", "Inception", "Zodiac" ];
 
-// Omdb api call
 
+// Lucky button
+$(".feeling_lucky").css("display", "none");
+$(".titlePage").css("display","inline");
+$(".movie-screen").css("display", "none");
+
+$(".lucky-button").on("click", function(event){
+  event.preventDefault()
+  console.log('clicked')
+  $(".feeling_lucky").css("display", "inline");
+  $(".titlePage").css("display","none");
+  $(".movie-screen").css("display", "none");
+});
+//How things will appear on the page initally
+$(".feeling_lucky").css("display", "none");
+$(".titlePage").css("display","inline");
+$(".movie-screen").css("display", "none");
+
+
+//Function for clikcing the Searching button in the top right corner
+$("#searchButton").on("click", function(e){
+  e.preventDefault();
+  var movie = $("#search-input").val();
+  movie = movie.replace(" ","-");
+  displayMovie(movie);
+  
+});
+
+
+//Function for clicking the "Feeling Lcuky" Button at the top of the screen
+$(".lucky-button").on("click", function(event){
+  event.preventDefault()
+  console.log('clicked')
+  $(".feeling_lucky").css("display", "inline");
+  $(".titlePage").css("display","none");
+  $(".movie-screen").css("display", "none");
+});
+
+//All these functions are for the feeling lucky random movies!
+$(".comedy").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = comedyArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".horror").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = horrorArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".romance").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = romanceArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".action").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = actionArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".sciFi").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = sciFiArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".drama").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = dramaArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".indie").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = indieArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".thriller").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = thrillerArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".musical").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = musicalsArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".western").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = westernArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".documentary").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = documentaryArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+$(".fantasy").on("click", function(){
+  var randomNumber = Math.floor(Math.random()*11);
+  var randomMovie = fantasyArray[randomNumber];
+  displayMovie(randomMovie);
+
+});
+
+
+// Omdb api call
 $(".searchButton").on("click", function(e){
   e.preventDefault();
   var movie = $(".search-input").val();
@@ -61,10 +173,11 @@ $(".searchButton").on("click", function (e) {
       kind: "youtube#searchResult",
       part: "snippet",
       type: "video",
-      q: $(".search-input").val().replace(/%20/g, "+"),
-      maxResults: 3,
-      order: "viewCount",
+      q: $(".search-input").val().replace(/%20/g, "+")+ "trailer",
+      maxResults: 1,
+      order: "relevance",
   })
+  
   // execute request
   request.execute(function (response) {
       var str = response.result;
@@ -75,7 +188,11 @@ $(".searchButton").on("click", function (e) {
       });
   });
   return false;
+ 
 });
+
+
+
 
 function init() {
   console.log(gapi.client);
