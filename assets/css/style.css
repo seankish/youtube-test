@@ -68,7 +68,7 @@
     background: #515b99;
   }
   .trailer-heading {
-    
+    overflow: hidden;
     align-items: center;
     flex-grow: 0;
     width:50%;
